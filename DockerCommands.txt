@@ -1,0 +1,8 @@
+BUILD:
+	docker build Dockerfile -t myangular crud-image
+
+RUN:
+	docker run imageNAme
+
+Container Creation :
+	docker run -d -p 4200:4200 --name crud-container(any) crud-app

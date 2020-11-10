@@ -1,0 +1,19 @@
+<table class="table table-hover" style="width:70%;">
+    <tr *ngFor="let emp of array">
+    
+        <td>{{emp.id}}<br><input type="text" *ngIf='emp.id==id && getData' style="width:70px" placeholder="{{emp.id}}" [(ngModel)]="id"></td>
+      <td>{{emp.firstname}}<br><input type="text" *ngIf='emp.id==id && getData' style="width:70px" placeholder="{{emp.firstname}}" onfocus="this.placeholder=''"  [(ngModel)]="firstname"></td>
+      <td>{{emp.lastname}}<br><input type="text" *ngIf='emp.id==id && getData' style="width:70px" placeholder="{{emp.lastname}}"  onfocus="this.placeholder=''"  [(ngModel)]="lastname"></td>
+      <td>{{emp.address}}<br><input type="text" *ngIf='emp.id==id && getData' style="width:70px" placeholder="{{emp.address}}" onfocus="this.placeholder=''"   ([ngModel])="address"></td>
+      <td>{{emp.contact}}<br><input type="text" *ngIf='emp.id==id && getData' style="width:70px" placeholder="{{emp.contact}}" onfocus="this.placeholder=''"   ([ngModel])="contact"></td>
+      <td>{{emp.designation}}<br><input type="text" *ngIf='emp.id==id && getData' style="width:70px"  placeholder="{{emp.designation}}" [(ngModel)]="designation" ></td>
+      
+      <td><button class="btn btn-primary" (click)="delete(emp.id)" i18n="@@delete">Delete</button></td>
+      <td><button class="btn btn-primary" (click)="putRequest(emp.id)" i18n="@@edit">Edit</button></td>
+      <td><button class="btn btn-primary" (click)="updatePost()" i18n="@@update">Update</button></td>
+
+
+      <td>
+      
+    </tr>
+  </table>
